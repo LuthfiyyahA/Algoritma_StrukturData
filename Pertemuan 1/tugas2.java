@@ -7,9 +7,9 @@ public class tugas2 {
         while (true) {
             System.out.println("____________________");
             System.out.println("Menu:");
-            System.out.println("1. Hitung Kecepatan");
-            System.out.println("2. Hitung Jarak");
-            System.out.println("3. Hitung Waktu");
+            System.out.println("1. Menghitung Kecepatan");
+            System.out.println("2. Menghitung Jarak");
+            System.out.println("3. Menghitung Waktu");
             System.out.println("4. Keluar");
             System.out.print("Pilih menu: ");
             int menu = sc.nextInt();
@@ -18,15 +18,15 @@ public class tugas2 {
 
             switch (menu) {
                 case 1:
-                System.out.println("Kecepatannya yaitu : " + hitungKecepatan() + " m/s");
+                System.out.println("Kecepatannya yaitu : " + hitungKecepatan() + " Km/jam");
                 System.out.print("\n");
                     break;
                 case 2:
-                System.out.println("Jaraknya yaitu : " + hitungJarak() + " m");
+                System.out.println("Jaraknya yaitu : " + hitungJarak() + " Km");
                 System.out.print("\n");
                     break;
                 case 3:
-                System.out.println("Waktunya yaitu : " + hitungWaktu() + " s");
+                System.out.println("Waktunya yaitu : " + hitungWaktu() + " jam");
                 System.out.print("\n");
                     break;
                 case 4:
@@ -43,10 +43,10 @@ public class tugas2 {
     static double hitungKecepatan() {
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Masukkan jarak : ");
+        System.out.print("Masukkan jarak (km)  : ");
         double s = sc.nextDouble();
         
-        System.out.print("Masukkan waktu : ");
+        System.out.print("Masukkan waktu (jam) : ");
         double t = sc.nextDouble();
 
         System.out.print("\n");
@@ -57,10 +57,10 @@ public class tugas2 {
     static double hitungJarak() {
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Masukkan kecepatan : ");
+        System.out.print("Masukkan kecepatan (km/jam) : ");
         double v = sc.nextDouble();
         
-        System.out.print("Masukkan waktu     : ");
+        System.out.print("Masukkan waktu (jam)        : ");
         double t = sc.nextDouble();
 
         System.out.print("\n");
@@ -71,10 +71,10 @@ public class tugas2 {
     static double hitungWaktu() {
        Scanner sc = new Scanner(System.in);
        
-       System.out.print("Masukkan jarak     : ");
+       System.out.print("Masukkan jarak (km)         : ");
        double s = sc.nextDouble();
        
-       System.out.print("Masukkan kecepatan : ");
+       System.out.print("Masukkan kecepatan (km/jam) : ");
        double v = sc.nextDouble();
 
        System.out.print("\n");
