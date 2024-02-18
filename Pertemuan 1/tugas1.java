@@ -18,11 +18,11 @@ public class tugas1 {
                 { 'M', 'A', 'L', 'A', 'N', 'G' },
                 { 'T', 'E', 'G', 'A', 'L' }};
 
-        System.out.println("___________________________________");
-        System.out.printf("| %-7s %-15s %-7s | \n", " ", "Kode Plat Mobil", " ");
-        System.out.println("###################################");
-        System.out.printf("| %-2s %-2s %-2s %-2s %-2s %-2s %-2s %-2s %-2s %-2s %-1s | \n", "A,", "B,", "C,", "D,", "E,", "F,", "G,", "H,", "L,", "N,", "T");
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("_____________________________________________");
+        System.out.printf("| %-12s %-15s %-12s | \n", " ", "Kode Plat Mobil", " ");
+        System.out.println("=============================================");
+        System.out.printf("| %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | %-1s | \n", "A", "B", "C", "D", "E", "F", "G", "H", "L", "N", "T");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         System.out.print("Masukkan Kode Plat Mobil : ");
         kode = sc.next().toUpperCase().charAt(0);
