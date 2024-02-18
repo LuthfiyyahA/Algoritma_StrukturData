@@ -32,9 +32,14 @@ public class bunga {
         System.out.println("Stok di RoyalGarden 4 Setelah Adanya Bunga Mati");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+        System.out.printf("| %-4s %-11s %-4s | %-6s %-5s %-6s | \n", " ", "Jenis Bunga", " ", " ", "Stock", " ");
+        System.out.println("_______________________________________________");
+
         for (int j = 0; j < stok[3].length; j++) {
             int stokBerkurang = stok[3][j] - pengurangan[j];
-            System.out.printf("%-8s : %-2s - %-2s = %-2s \n", bunga[j], stok[3][j], pengurangan[j], stokBerkurang);
+            System.out.printf("| %-21s | %-19s | \n", bunga[j], stokBerkurang);
         }
+        
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 }
