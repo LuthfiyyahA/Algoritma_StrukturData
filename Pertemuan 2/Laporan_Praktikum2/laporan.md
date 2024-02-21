@@ -9,9 +9,9 @@
 ## 1. Percobaan 1: Deklarasi Class, Atribut dan Method
 * ### Kode Program
     ```java
-        public class Buku15 {
-        String judul, pengarang;
-        int halaman, stok, harga;
+    public class Buku15 {
+    String judul, pengarang;
+    int halaman, stok, harga;
 
         void tampilInformasi() {
             System.out.println("Judul : " + judul);
@@ -30,10 +30,11 @@
         }
 
         int gantiHarga(int hrg) {
-            harga = hrg;
-            return hrg;
+        harga = hrg;
+        return hrg;
         }
-    }```
+    }
+    ```
 * ### Output Kode
     <img src = "Percobaan 1.png">
 * ### Pertanyaan
@@ -43,51 +44,10 @@
     4. Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)!
     5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?  
 * ### Jawaban
-    1. Karakteristiknya yaitu :  
-       • Memiliki variabel/atribut  
-       • Bisa melakukan fungsi/method
-    2. Atributnya :  
-       • Ada 5  
-       • Yaitu :  judul (String), pengarang(String), halaman(int), stok(int), harga(int)
-    3. Methodnya :  
-       • Ada 4  
-       • Yaitu : 
-       - tampilInformasi() : void
-       - terjual(jml : int) : void
-       - restock(jml : int) : void
-       - gantiHarga(hrg : int) : int
-    4. ```java
-        public class Buku15 {
-        String judul, pengarang;
-        int halaman, stok, harga;
-
-            void tampilInformasi() {
-                System.out.println("Judul : " + judul);
-                System.out.println("Pengarang : " + pengarang);
-                System.out.println("Jumlah Halaman : " + halaman);
-                System.out.println("Sisa stok : " + stok);
-                System.out.println("Harga : " + harga);
-            }
-
-            void terjual(int jml) {
-                if (stok > 0) {
-                stok -= jml;
-                }
-            }
-
-            void restock(int jml) {
-                stok += jml;
-            }
-
-            int gantiHarga(int hrg) {
-                harga = hrg;
-                return hrg;
-            }
-        } ```
-    5. 
+    
 ## 2. Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 * ### Kode Program
-```java
+    ```java
     public class BukuMain15 {
         public static void main(String[] args) {
             Buku15 bk1 = new Buku15();
@@ -103,16 +63,20 @@
             bk1.tampilInformasi();
         }
     }
-```
+    ```
 * ### Output Kode
+    <img src = "Percobaan 2.png">
 * ### Pertanyaan
+    1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan?  
+    2. Bagaimana cara mengakses atribut dan method dari suatu objek?  
+    3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?  
 * ### Jawaban
-## 3. Percobaan 3: Membuat Konstruktor
+    
 * ### Kode Program 1
-```java
-        public class Buku15 {
-        String judul, pengarang;
-        int halaman, stok, harga;
+    ```java
+    public class Buku15 {
+    String judul, pengarang;
+    int halaman, stok, harga;
 
         public Buku15() {
 
@@ -149,9 +113,9 @@
             return hrg;
         }
     }
-```
+    ```
 * ### Kode Program 2
-```java
+    ```java
     public class BukuMain15 {
         public static void main(String[] args) {
             Buku15 bk1 = new Buku15();
@@ -171,80 +135,144 @@
             bk2.tampilInformasi();
         }
     }
-```
+    ```
 * ### Output Kode
+    <img src = "Percobaan 3.png">
 * ### Pertanyaan
+    1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk mendeklarasikan konstruktor berparameter!
+    2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+    3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana hasilnya? Jelaskan mengapa hasilnya demikian!
+    4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses secara berurutan? Jelaskan alasannya!
+    5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor berparameter dari class Buku!
+    6. Commit dan push kode program ke Github
 * ### Jawaban
+    
 ## 4. Latihan Praktikum
 * ## Tugas 1
     * ### Kode Program 
-    ```java
+        ```java
         public class Buku15 {
         String judul, pengarang;
         int halaman, stok, harga;
 
-        public Buku15() {
+            public Buku15() {
 
-        }
+            }
 
-        public Buku15(String jud, String pg, int hal, int stok, int har) {
-            judul = jud;
-            pengarang = pg;
-            halaman = hal;
-            this.stok = stok;
-            harga = har;
-        }
+            public Buku15(String jud, String pg, int hal, int stok, int har) {
+                judul = jud;
+                pengarang = pg;
+                halaman = hal;
+                this.stok = stok;
+                harga = har;
+            }
 
-        void tampilInformasi() {
-            System.out.println("Judul : " + judul);
-            System.out.println("Pengarang : " + pengarang);
-            System.out.println("Jumlah Halaman : " + halaman);
-            System.out.println("Sisa stok : " + stok);
-            System.out.println("Harga : " + harga);
-        }
+            void tampilInformasi() {
+                System.out.println("Judul : " + judul);
+                System.out.println("Pengarang : " + pengarang);
+                System.out.println("Jumlah Halaman : " + halaman);
+                System.out.println("Sisa stok : " + stok);
+                System.out.println("Harga : " + harga);
+            }
 
-        void terjual(int jml) {
-            if (stok < 0) {
-            stok -= jml;
+            void terjual(int jml) {
+                if (stok < 0) {
+                stok -= jml;
+                }
+            }
+
+            void restock(int jml) {
+                stok += jml;
+            }
+
+            int gantiHarga(int hrg) {
+                harga = hrg;
+                return hrg;
+            }
+
+            int hitungHargaTotal(){
+                gantiHarga(harga);
+                return gantiHarga(harga) * stok;
+            }
+
+            double hitungDiskon(int hargaTotal) {
+                if (hargaTotal > 150000) {
+                    return hargaTotal * 0.12;
+                } else if (hargaTotal >= 75000) {
+                    return hargaTotal * 0.05;
+                } else {
+                    return hargaTotal * 0.0;
+                }
+            }
+
+            double hitungHargaBayar(int hargaTotal, double diskon) {
+                return hargaTotal - diskon;
             }
         }
-
-        void restock(int jml) {
-            stok += jml;
-        }
-
-        int gantiHarga(int hrg) {
-            harga = hrg;
-            return hrg;
-        }
-
-        int hitungHargaTotal(){
-            gantiHarga(harga);
-            return gantiHarga(harga) * stok;
-        }
-
-        double hitungDiskon(int hargaTotal) {
-            if (hargaTotal > 150000) {
-                return hargaTotal * 0.12;
-            } else if (hargaTotal >= 75000) {
-                return hargaTotal * 0.05;
-            } else {
-                return hargaTotal * 0.0;
-            }
-        }
-
-        double hitungHargaBayar(int hargaTotal, double diskon) {
-            return hargaTotal - diskon;
-        }
-    }
-    ```
-    * ### Output Kode
-    * ### Pertanyaan
-    * ### Jawaban
+        ```
 * ## Tugas 2
-    * ### Kode Program
-    ```java
-    ```
+    * ### Kode Program 1
+        ```java
+        public class Dragon {
+        int x, y, width, height;
+
+            void moveLeft() {
+                x -= 1;
+                if (x < 0 || x > width) {
+                    detectCollision(x, y);
+                }
+            }
+
+            void moveRight() {
+                x += 1;
+                if (x < 0 || x > width) {
+                    detectCollision(x, y);
+                }
+            }
+
+            void moveUp() {
+                y -= 1;
+                if (y < 0 || y > height) {
+                    detectCollision(x, y);
+                }
+            }
+
+            void moveDown() {
+                y += 1;
+                if (y < 0 || y > height) {
+                    detectCollision(x, y);
+                }
+            }
+
+            void printPosition() {
+                System.out.println("Dragon sedang berada di (x,y) : (" + x + ", " + y + ")");
+            }
+
+            void detectCollision(int x, int y) {
+                System.out.println("Game Over");
+            }
+        }
+        ```
+    * ### Kode Program 2
+        ```Java
+        public class DragonMain {
+            public static void main(String[] args) {
+                Dragon naga = new Dragon();
+                naga.x = 10;
+                naga.y = 10;
+                naga.width = 10;
+                naga.height = 10;
+
+                naga.printPosition();
+                naga.moveLeft();
+                naga.moveUp();
+                naga.printPosition();
+                naga.moveRight();
+                naga.moveDown();
+                naga.printPosition();
+                naga.moveDown();
+            }
+        }
+        ```
     * ### Output Kode
-    * ### Pertanyaan
-    * ### Jawaban
+        <img src = "Tugas 2.png">
