@@ -1,0 +1,250 @@
+<h1 style ="font-family: calibri ; text-align : center; "> Laporan Praktikum Pertemuan 2
+<h1 style ="text-align : center; "><img src = "Logo Polinema.png">
+
+<h3 style ="font-family: calibri ; text-align : center; "> NIM     : 2341720148  
+<h3 style ="font-family: calibri ; text-align : center; "> Nama    : Luthfiyyah Adzka Nur Shabrina  
+<h3 style ="font-family: calibri ; text-align : center; "> Kelas   : TI-1H
+
+----
+## 1. Percobaan 1: Deklarasi Class, Atribut dan Method
+* ### Kode Program
+    ```java
+        public class Buku15 {
+        String judul, pengarang;
+        int halaman, stok, harga;
+
+        void tampilInformasi() {
+            System.out.println("Judul : " + judul);
+            System.out.println("Pengarang : " + pengarang);
+            System.out.println("Jumlah Halaman : " + halaman);
+            System.out.println("Sisa stok : " + stok);
+            System.out.println("Harga : " + harga);
+        }
+
+        void terjual(int jml) {
+            stok -= jml;
+        }
+
+        void restock(int jml) {
+            stok += jml;
+        }
+
+        int gantiHarga(int hrg) {
+            harga = hrg;
+            return hrg;
+        }
+    }```
+* ### Output Kode
+    <img src = "Percobaan 1.png">
+* ### Pertanyaan
+    1. Sebutkan dua karakteristik class atau object!
+    2. Perhatikan class Buku pada Praktikum 1 tersebut, ada berapa atribut yang dimiliki oleh class Buku? Sebutkan apa saja atributnya!
+    3. Ada berapa method yang dimiliki oleh class tersebut? Sebutkan apa saja methodnya!
+    4. Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)!
+    5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?  
+* ### Jawaban
+    1. Karakteristiknya yaitu :  
+       • Memiliki variabel/atribut  
+       • Bisa melakukan fungsi/method
+    2. Atributnya :  
+       • Ada 5  
+       • Yaitu :  judul (String), pengarang(String), halaman(int), stok(int), harga(int)
+    3. Methodnya :  
+       • Ada 4  
+       • Yaitu : 
+       - tampilInformasi() : void
+       - terjual(jml : int) : void
+       - restock(jml : int) : void
+       - gantiHarga(hrg : int) : int
+    4. ```java
+        public class Buku15 {
+        String judul, pengarang;
+        int halaman, stok, harga;
+
+            void tampilInformasi() {
+                System.out.println("Judul : " + judul);
+                System.out.println("Pengarang : " + pengarang);
+                System.out.println("Jumlah Halaman : " + halaman);
+                System.out.println("Sisa stok : " + stok);
+                System.out.println("Harga : " + harga);
+            }
+
+            void terjual(int jml) {
+                if (stok > 0) {
+                stok -= jml;
+                }
+            }
+
+            void restock(int jml) {
+                stok += jml;
+            }
+
+            int gantiHarga(int hrg) {
+                harga = hrg;
+                return hrg;
+            }
+        } ```
+    5. 
+## 2. Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+* ### Kode Program
+```java
+    public class BukuMain15 {
+        public static void main(String[] args) {
+            Buku15 bk1 = new Buku15();
+            bk1.judul = "Today Ends Tomorrow Comes";
+            bk1.pengarang = "Denanda Pratiwi";
+            bk1.halaman = 198;
+            bk1.stok = 13;
+            bk1.harga = 71000;
+
+            bk1.tampilInformasi();
+            bk1.terjual(5);
+            bk1.gantiHarga(60000);
+            bk1.tampilInformasi();
+        }
+    }
+```
+* ### Output Kode
+* ### Pertanyaan
+* ### Jawaban
+## 3. Percobaan 3: Membuat Konstruktor
+* ### Kode Program 1
+```java
+        public class Buku15 {
+        String judul, pengarang;
+        int halaman, stok, harga;
+
+        public Buku15() {
+
+        }
+
+        public Buku15(String jud, String pg, int hal, int stok, int har) {
+            judul = jud;
+            pengarang = pg;
+            halaman = hal;
+            this.stok = stok;
+            harga = har;
+        }
+
+        void tampilInformasi() {
+            System.out.println("Judul : " + judul);
+            System.out.println("Pengarang : " + pengarang);
+            System.out.println("Jumlah Halaman : " + halaman);
+            System.out.println("Sisa stok : " + stok);
+            System.out.println("Harga : " + harga);
+        }
+
+        void terjual(int jml) {
+            if (stok < 0) {
+            stok -= jml;
+            }
+        }
+
+        void restock(int jml) {
+            stok += jml;
+        }
+
+        int gantiHarga(int hrg) {
+            harga = hrg;
+            return hrg;
+        }
+    }
+```
+* ### Kode Program 2
+```java
+    public class BukuMain15 {
+        public static void main(String[] args) {
+            Buku15 bk1 = new Buku15();
+            bk1.judul = "Today Ends Tomorrow Comes";
+            bk1.pengarang = "Denanda Pratiwi";
+            bk1.halaman = 198;
+            bk1.stok = 13;
+            bk1.harga = 71000;
+
+            bk1.tampilInformasi();
+            bk1.terjual(5);
+            bk1.gantiHarga(60000);
+            bk1.tampilInformasi();
+
+            Buku15 bk2 = new Buku15("Self Reward", "Maheera Ayesha", 160, 29, 59000);
+            bk2.terjual(11);
+            bk2.tampilInformasi();
+        }
+    }
+```
+* ### Output Kode
+* ### Pertanyaan
+* ### Jawaban
+## 4. Latihan Praktikum
+* ## Tugas 1
+    * ### Kode Program 
+    ```java
+        public class Buku15 {
+        String judul, pengarang;
+        int halaman, stok, harga;
+
+        public Buku15() {
+
+        }
+
+        public Buku15(String jud, String pg, int hal, int stok, int har) {
+            judul = jud;
+            pengarang = pg;
+            halaman = hal;
+            this.stok = stok;
+            harga = har;
+        }
+
+        void tampilInformasi() {
+            System.out.println("Judul : " + judul);
+            System.out.println("Pengarang : " + pengarang);
+            System.out.println("Jumlah Halaman : " + halaman);
+            System.out.println("Sisa stok : " + stok);
+            System.out.println("Harga : " + harga);
+        }
+
+        void terjual(int jml) {
+            if (stok < 0) {
+            stok -= jml;
+            }
+        }
+
+        void restock(int jml) {
+            stok += jml;
+        }
+
+        int gantiHarga(int hrg) {
+            harga = hrg;
+            return hrg;
+        }
+
+        int hitungHargaTotal(){
+            gantiHarga(harga);
+            return gantiHarga(harga) * stok;
+        }
+
+        double hitungDiskon(int hargaTotal) {
+            if (hargaTotal > 150000) {
+                return hargaTotal * 0.12;
+            } else if (hargaTotal >= 75000) {
+                return hargaTotal * 0.05;
+            } else {
+                return hargaTotal * 0.0;
+            }
+        }
+
+        double hitungHargaBayar(int hargaTotal, double diskon) {
+            return hargaTotal - diskon;
+        }
+    }
+    ```
+    * ### Output Kode
+    * ### Pertanyaan
+    * ### Jawaban
+* ## Tugas 2
+    * ### Kode Program
+    ```java
+    ```
+    * ### Output Kode
+    * ### Pertanyaan
+    * ### Jawaban
