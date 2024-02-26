@@ -22,18 +22,10 @@ public class MhsMain {
             mahasiswa[i].ipk = sc.nextDouble();
             sc.nextLine();
         }
-
-        System.out.print("\n");
-        
-        for (int i = 0; i < 3; i++) {
-            System.out.println("-------------------------");
-            System.out.println("Data mahasiswa Ke-"+ (i+1));
-            System.out.println("nama          : "+ mahasiswa[i].nama +"\nnim           : "+ mahasiswa[i].nim +"\nJenis kelamin : "+ mahasiswa[i].jK + "\nNilai IPK     : "+ mahasiswa[i].ipk);
-        }
-
-        System.out.print("\n");
         
         Mhs mhs = new Mhs();
+        mhs.tampilData(mahasiswa);
+
         double rataRata = mhs.hitungRataRata(mahasiswa);
         System.out.println("----------------------------------------------");
         System.out.println("Rata-rata IPK mahasiswa adalah : " + rataRata);

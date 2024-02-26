@@ -21,4 +21,14 @@ public class Mhs {
         }
         return besar;
     }
+
+    void tampilData(Mhs[] mahasiswa) {
+        System.out.print("\n");
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-------------------------");
+            System.out.println("Data mahasiswa Ke-"+ (i+1));
+            System.out.println("nama          : "+ mahasiswa[i].nama +"\nnim           : "+ mahasiswa[i].nim +"\nJenis kelamin : "+ mahasiswa[i].jK + "\nNilai IPK     : "+ mahasiswa[i].ipk);
+        }
+    }
 }
