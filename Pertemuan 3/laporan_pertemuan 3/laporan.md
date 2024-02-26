@@ -150,10 +150,135 @@
         ```java
         
         ```
+    * ### Output Kode
+        <img src = "Tugas 1.png">
 * ## Tugas 2
     * ### Kode Program 1
         ```java
-        
+        public class Mhs {
+            public String nama;
+            public int nim;
+            public char jK;
+            public double ipk;
+        }
+        ```
+    * ### Kode Program 2
+        ```java
+        import java.util.Scanner;
+
+        public class MhsMain {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                Mhs[] mahasiswa = new Mhs[3];
+
+                for (int i = 0; i < 3; i++) {
+                    mahasiswa[i] = new Mhs();
+
+                    System.out.println("Masukkan data mahasiswa ke-"+ (i+1));
+                    System.out.print("Masukkan nama          : ");
+                    mahasiswa[i].nama = sc.nextLine();
+
+                    System.out.print("Masukkan NIM           : ");
+                    mahasiswa[i].nim = sc.nextInt();
+
+                    System.out.print("Masukkan jenis kelamin : ");
+                    mahasiswa[i].jK = sc.next().charAt(0);
+
+                    System.out.print("Masukkan IPK           : ");
+                    mahasiswa[i].ipk = sc.nextDouble();
+                    sc.nextLine();
+                }
+
+                System.out.print("\n");
+                
+                for (int i = 0; i < 3; i++) {
+                    System.out.println("Data mahasiswa Ke-"+ (i+1));
+                    System.out.println("nama          : "+ mahasiswa[i].nama +"\nnim           : "+ mahasiswa[i].nim +"\nJenis kelamin : "+ mahasiswa[i].jK + "\nNilai IPK     : "+ mahasiswa[i].ipk);
+                }
+            }
+        }
         ```
     * ### Output Kode
         <img src = "Tugas 2.png">
+* ## Tugas 3
+    * ### Kode Program 1
+        ```java
+        public class Mhs {
+            public String nama;
+            public int nim;
+            public char jK;
+            public double ipk;
+
+            double hitungRataRata(Mhs[] mahasiswa) {
+                double total = 0;
+                for (int i = 0; i < 3; i++) {
+                    total += mahasiswa[i].ipk;
+                }
+                return total / 3;
+            }
+
+            double cariIpkTerbesar(Mhs[] mahasiswa) {
+                double besar = mahasiswa[0].ipk;
+                for (int i = 0; i < 3; i++) {
+                    if (mahasiswa[i].ipk > besar) {
+                        besar = mahasiswa[i].ipk;
+                    }
+                }
+                return besar;
+            }
+        }
+        ```
+    * ### Kode Program 2
+        ```java
+        import java.util.Scanner;
+
+        public class MhsMain {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                Mhs[] mahasiswa = new Mhs[3];
+
+                for (int i = 0; i < 3; i++) {
+                    mahasiswa[i] = new Mhs();
+
+                    System.out.println("Masukkan data mahasiswa ke-"+ (i+1));
+                    System.out.print("Masukkan nama          : ");
+                    mahasiswa[i].nama = sc.nextLine();
+
+                    System.out.print("Masukkan NIM           : ");
+                    mahasiswa[i].nim = sc.nextInt();
+
+                    System.out.print("Masukkan jenis kelamin : ");
+                    mahasiswa[i].jK = sc.next().charAt(0);
+
+                    System.out.print("Masukkan IPK           : ");
+                    mahasiswa[i].ipk = sc.nextDouble();
+                    sc.nextLine();
+                }
+
+                System.out.print("\n");
+                
+                for (int i = 0; i < 3; i++) {
+                    System.out.println("-------------------------");
+                    System.out.println("Data mahasiswa Ke-"+ (i+1));
+                    System.out.println("nama          : "+ mahasiswa[i].nama +"\nnim           : "+ mahasiswa[i].nim +"\nJenis kelamin : "+ mahasiswa[i].jK + "\nNilai IPK     : "+ mahasiswa[i].ipk);
+                }
+
+                System.out.print("\n");
+                
+                Mhs mhs = new Mhs();
+                double rataRata = mhs.hitungRataRata(mahasiswa);
+                System.out.println("----------------------------------------------");
+                System.out.println("Rata-rata IPK mahasiswa adalah : " + rataRata);
+
+                double ipkBesar = mhs.cariIpkTerbesar(mahasiswa);
+                System.out.println("----------------------------------------------");
+                System.out.println("IPK mahasiswa Terbesar adalah : " + ipkBesar);
+                System.out.println("----------------------------------------------");
+
+                sc.close();
+            }
+        } 
+        ```
+    * ### Output Kode
+        <img src = "Tugas 31.png">
+        <img src = "Tugas 32.png">
