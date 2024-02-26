@@ -25,15 +25,17 @@ public class MhsMain {
         
         Mhs mhs = new Mhs();
         mhs.tampilData(mahasiswa);
+        System.out.print("\n");
 
         double rataRata = mhs.hitungRataRata(mahasiswa);
-        System.out.println("----------------------------------------------");
-        System.out.println("Rata-rata IPK mahasiswa adalah : " + rataRata);
+        System.out.println("-------------------------------------");
+        System.out.printf("%-30s : %-4.2f","Rata-rata IPK mahasiswa adalah", rataRata);
+        System.out.print("\n");
 
         double ipkBesar = mhs.cariIpkTerbesar(mahasiswa);
-        System.out.println("----------------------------------------------");
-        System.out.println("IPK mahasiswa Terbesar adalah : " + ipkBesar);
-        System.out.println("----------------------------------------------");
+        System.out.println("-------------------------------------");
+        System.out.println("IPK mahasiswa Terbesar adalah : "+ ipkBesar);
+        System.out.println("-------------------------------------");
 
         sc.close();
     }
