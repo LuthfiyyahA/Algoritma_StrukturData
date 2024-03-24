@@ -1,5 +1,5 @@
 <div align="center">
-<h1> Laporan Praktikum Pertemuan 2</h1>
+<h1> Laporan Praktikum Pertemuan 3</h1>
 <img src = "./gambar/Logo Polinema.png">
 
 <h3> NIM     : 2341720148 </h3>
