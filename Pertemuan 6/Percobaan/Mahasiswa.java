@@ -1,3 +1,5 @@
+package Percobaan;
+
 public class Mahasiswa {
     String nama;
     int thnMasuk, umur;
