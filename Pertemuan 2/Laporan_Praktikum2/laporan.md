@@ -1,9 +1,11 @@
-<h1 style ="font-family: calibri ; text-align : center; "> Laporan Praktikum Pertemuan 2
-<h1 style ="text-align : center; "><img src = "Logo Polinema.png">
+<div align="center">
+<h1> Laporan Praktikum Pertemuan 2</h1>
+<img src = "./gambar/Logo Polinema.png">
 
-<h3 style ="font-family: calibri ; text-align : center; "> NIM     : 2341720148  
-<h3 style ="font-family: calibri ; text-align : center; "> Nama    : Luthfiyyah Adzka Nur Shabrina  
-<h3 style ="font-family: calibri ; text-align : center; "> Kelas   : TI-1H
+<h3> NIM     : 2341720148 </h3>
+<h3> Nama    : Luthfiyyah Adzka Nur Shabrina </h3> 
+<h3> Kelas   : TI-1H</h3>
+</div>
 
 ----
 ## 1. Percobaan 1: Deklarasi Class, Atribut dan Method
@@ -44,7 +46,53 @@
     4. Perhatikan method terjual() yang terdapat di dalam class Buku. Modifikasi isi method tersebut sehingga proses pengurangan hanya dapat dilakukan jika stok masih ada (lebih besar dari 0)!
     5. Menurut Anda, mengapa method restock() mempunyai satu parameter berupa bilangan int?  
 * ### Jawaban
-    
+    1. Karakteristiknya yaitu :  
+       • Memiliki variabel/atribut  
+       • Bisa melakukan fungsi/method
+
+    2. Atributnya :  
+       • Ada 5  
+       • Yaitu :  judul (String), pengarang(String), halaman(int), stok(int), harga(int)
+
+    3. Methodnya :  
+       • Ada 4  
+       • Yaitu : 
+       - tampilInformasi() : void
+       - terjual(jml : int) : void
+       - restock(jml : int) : void
+       - gantiHarga(hrg : int) : int
+
+    4. ```java
+        public class Buku15 {
+        String judul, pengarang;
+        int halaman, stok, harga;
+
+            void tampilInformasi() {
+                System.out.println("Judul : " + judul);
+                System.out.println("Pengarang : " + pengarang);
+                System.out.println("Jumlah Halaman : " + halaman);
+                System.out.println("Sisa stok : " + stok);
+                System.out.println("Harga : " + harga);
+            }
+
+            void terjual(int jml) {
+                if (stok > 0) {
+                stok -= jml;
+                }
+            }
+
+            void restock(int jml) {
+                stok += jml;
+            }
+
+            int gantiHarga(int hrg) {
+                harga = hrg;
+                return hrg;
+            }
+        } 
+        ```
+
+    5. Parameter int digunakan untuk menambahkan jumlah stok buku sesuai dengan nilai yang diinputkan oleh pengguna, sedangkan jumlah stok buku harus berupa bilangan bulat positif yang tidak memiliki koma atau desimal
 ## 2. Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
 * ### Kode Program
     ```java
@@ -71,7 +119,14 @@
     2. Bagaimana cara mengakses atribut dan method dari suatu objek?  
     3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?  
 * ### Jawaban
-    
+    1. ```java
+        Buku15 bk1 = new Buku15();
+        ```
+
+    2. Menggunakan operator titik (.) setelah nama objek, kemudian menuliskan nama atribut atau method yang ingin diakses
+
+    3. Karena nilai atribut stok dan harga dari bk1 berubah setelah memanggil method terjual() dan gantiHarga(), method terjual() mengurangi stok sebanyak 5, sedangkan method gantiHarga() mengubah harga menjadi 60000
+## 3. Percobaan 3: Membuat Konstruktor
 * ### Kode Program 1
     ```java
     public class Buku15 {
@@ -146,7 +201,22 @@
     5. Buat object baru dengan nama buku<NamaMahasiswa> menggunakan konstruktor berparameter dari class Buku!
     6. Commit dan push kode program ke Github
 * ### Jawaban
-    
+    1. ```java
+        public Buku15(String jud, String pg, int hal, int stok, int har) {
+            judul = jud;
+            pengarang = pg;
+            halaman = hal;
+            this.stok = stok;
+            harga = har;
+        }
+        ```
+    2. Memanggil konstruktor berparameter dari class Buku15 dengan memberikan nilai “Self Reward” untuk judul, “Maheera Ayesha” untuk pengarang, 160 untuk halaman, 29 untuk stok, dan 59000 untuk harga kemudian menginisialisasi nilai atribut judul, pengarang, halaman, stok, dan harga dari objek bk2 sesuai dengan nilai parameter yang diberikan
+
+    3. Hasilnya tetap, karena objek Buku15 masih bisa diinstansiasi  dengan menggunakan konstruktor berparameter. Konstruktor default digunakan jika ingin membuat objek tanpa memberikan nilai awal untuk atributnya
+
+    4. Tidak, karena method di dalam class tidak berhubungan antara method satu dengan method lainnya, method hanya akan mengubah atau megisi sesuai dengan atribut ataupun parameter yang dimiliki
+
+    5. 
 ## 4. Latihan Praktikum
 * ## Tugas 1
     * ### Kode Program 

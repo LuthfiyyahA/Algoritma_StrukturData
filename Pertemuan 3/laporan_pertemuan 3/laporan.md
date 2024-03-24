@@ -1,9 +1,11 @@
-<h1 style ="font-family: calibri ; text-align : center; "> Laporan Praktikum Pertemuan 2
-<h1 style ="text-align : center; "><img src = "Logo Polinema.png">
+<div align="center">
+<h1> Laporan Praktikum Pertemuan 2</h1>
+<img src = "./gambar/Logo Polinema.png">
 
-<h3 style ="font-family: calibri ; text-align : center; "> NIM     : 2341720148  
-<h3 style ="font-family: calibri ; text-align : center; "> Nama    : Luthfiyyah Adzka Nur Shabrina  
-<h3 style ="font-family: calibri ; text-align : center; "> Kelas   : TI-1H
+<h3> NIM     : 2341720148 </h3>
+<h3> Nama    : Luthfiyyah Adzka Nur Shabrina </h3> 
+<h3> Kelas   : TI-1H</h3>
+</div>
 
 ----
 ## 1. Percobaan 1: Membuat Array dari Object, Mengisi dan Menampilkan
@@ -39,15 +41,15 @@
     }
     ```
 * ### Output Kode
-    <img src = "Percobaan 1.png">
+    <img src = "./gambar/Percobaan 1.png">
 * ### Pertanyaan
     1. Berdasarkan uji coba 3.2, apakah class yang akan dibuat array of object harus selalu memiliki atribut dan sekaligus method?Jelaskan!
     2. Apakah class PersegiPanjang memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan konstruktur pada baris program berikut :
-    <img src = "P1 no2.png">
+    <img src = "./gambar/P1 no2.png">
     3. Apa yang dimaksud dengan kode berikut ini:
-    <img src = "P1 no3.png">
+    <img src = "./gambar/P1 no3.png">
     4. Apa yang dimaksud dengan kode berikut ini:
-    <img src = "P1 no4.png">
+    <img src = "./gambar/P1 no4.png">
     5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
 * ### Jawaban
     
@@ -85,12 +87,12 @@
     }
     ```
 * ### Output Kode
-    <img src = "Percobaan 2.png">
+    <img src = "./gambar/Percobaan 2.png">
 * ### Pertanyaan
     1. Apakah array of object dapat diimplementasikan pada array 2 Dimensi?
     2. Jika jawaban soal no satu iya, berikan contohnya! Jika tidak, jelaskan!
     3. Jika diketahui terdapat class Persegi yang memiliki atribut sisi bertipe integer, maka kode dibawah ini akan memunculkan error saat dijalankan. Mengapa?
-    <img src = "P2 no3.png">
+    <img src = "./gambar/P2 no3.png">
     4. Modifikasi kode program pada praktikum 3.3 agar length array menjadi inputan dengan Scanner!
     5. Apakah boleh Jika terjadi duplikasi instansiasi array of objek, misalkan saja instansiasi dilakukan pada ppArray[i] sekaligus ppArray[0]?Jelaskan !  
 * ### Jawaban
@@ -131,15 +133,15 @@
     }
     ```
 * ### Output Kode
-    <img src = "Percobaan 3.png">
+    <img src = "./gambar/Percobaan 3.png">
 * ### Pertanyaan
     1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh!
     2. Jika diketahui terdapat class Segitiga seperti berikut ini:
-    <img src = "P3 no2.png">
+    <img src = "./gambar/P3 no2.png">
     Tambahkan konstruktor pada class Segitiga tersebut yang berisi parameter int a, int t yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi.
     3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga tersebut. Asumsi segitiga adalah segitiga siku-siku. (Hint: Anda dapat menggunakan bantuan library Math pada Java untuk mengkalkulasi sisi miring)
     4. Pada fungsi main, buat array Segitiga sgArray yang berisi 4 elemen, isikan masing-masing atributnya sebagai berikut:
-    <img src = "P3 no4.png">
+    <img src = "./gambar/P3 no4.png">
     5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method hitungLuas() dan hitungKeliling().
 
 * ### Jawaban
@@ -151,7 +153,7 @@
         
         ```
     * ### Output Kode
-        <img src = "Tugas 1.png">
+        <img src = "./gambar/Tugas 1.png">
 * ## Tugas 2
     * ### Kode Program 1
         ```java
@@ -199,7 +201,7 @@
         }
         ```
     * ### Output Kode
-        <img src = "Tugas 2.png">
+        <img src = "./gambar/Tugas 2.png">
 * ## Tugas 3
     * ### Kode Program 1
         ```java
@@ -284,5 +286,5 @@
         } 
         ```
     * ### Output Kode
-        <img src = "Tugas 31.png">
-        <img src = "Tugas 32.png">
+        <img src = "./gambar/Tugas 31.png">
+        <img src = "./gambar/Tugas 32.png">

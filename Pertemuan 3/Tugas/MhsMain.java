@@ -3,9 +3,14 @@ import java.util.Scanner;
 public class MhsMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Mhs[] mahasiswa = new Mhs[3];
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        int c = sc.nextInt();
 
-        for (int i = 0; i < 3; i++) {
+        Mhs[] mahasiswa = new Mhs[c];
+        sc.nextLine();
+
+        
+        for (int i = 0; i < mahasiswa.length; i++) {
             mahasiswa[i] = new Mhs();
 
             System.out.println("Masukkan data mahasiswa ke-"+ (i+1));
@@ -34,7 +39,7 @@ public class MhsMain {
 
         double ipkBesar = mhs.cariIpkTerbesar(mahasiswa);
         System.out.println("-------------------------------------");
-        System.out.println("IPK mahasiswa Terbesar adalah : "+ ipkBesar);
+        System.out.println("IPK mahasiswa Terbesar adalah  : "+ ipkBesar);
         System.out.println("-------------------------------------");
 
         sc.close();
