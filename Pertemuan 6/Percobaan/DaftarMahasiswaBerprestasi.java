@@ -5,7 +5,7 @@ public class DaftarMahasiswaBerprestasi {
     int idx;
 
     void tambah(Mahasiswa m) {
-        if (idx<listMhs.length) {
+        if (idx < listMhs.length) {
             listMhs[idx] = m;
             idx++;
         } else {
@@ -32,11 +32,12 @@ public class DaftarMahasiswaBerprestasi {
         }
     }
 
-    Void selectionSort() {
+    void selectionSort() {
         for (int i = 0; i < listMhs.length - 1; i++) {
             int idxMin = i;
             for (int j = i + 1; j < listMhs.length; j++) {
-                if (listMhs[j].ipk > listMhs[idxMin].ipk) {
+                //if (listMhs[j].ipk > listMhs[idxMin].ipk) {}
+                if (listMhs[j].ipk < listMhs[idxMin].ipk) {
                     idxMin = j;
                 }
             }
@@ -48,9 +49,10 @@ public class DaftarMahasiswaBerprestasi {
 
     void insectionSort() {
         for (int i = 1; i < listMhs.length; i++) {
-            Mahasiswa temp = listlistMhs[i];
+            Mahasiswa temp = listMhs[i];
             int j = i;
-            while (j < 0 && listMhs[j - 1].ipk > temp.ipk) {
+            //while (j < 0 && listMhs[j - 1].ipk > temp.ipk) {}
+                while (j > 0 && listMhs[j - 1].ipk > temp.ipk) {
                 listMhs[j] = listMhs[j - 1];
                 j--;
             }
