@@ -5,7 +5,9 @@ public class Main15 {
         Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
 
-        Sort15 data = new Sort15; 
+        Sort15 nil = new Sort15();
+
+        int data[] = {23, 28, 39, 3, 13, 2, 0, 25, 14, 44, 22, 20, 10, 7, 34, 40, 20};
         System.out.println("Sorting dengan Merge Sort");
         System.out.println("--------------------------");
         Sort15 mSort = new Sort15();
@@ -32,10 +34,10 @@ public class Main15 {
 
             System.out.println("=======================================================");
             System.out.println("menggunakan Sequential Search");
-            int posisi = data.FindSeqSearch(cari);
-            data.Tampilposisi(cari, posisi);
-            data.TampilData(cari, posisi);
-            dataBuku.tampilDataBuku();
+            int posisi;
+            posisi = nil.FindSeqSearch(cari);
+            nil.Tampilposisi(cari, posisi);
+            nil.TampilData(cari, posisi);
                 break;
         
             case 2:
@@ -45,9 +47,9 @@ public class Main15 {
             
             System.out.println("=======================================================");
             System.out.println("menggunakan Binary Search");
-            posisi = data.FindBinarySearch(search, 0, jumBuku - 1);
-            data.Tampilposisi(search, posisi);
-            data.TampilData(search, posisi);
+            posisi = nil.FindBinarySearch(search, 0, jumBuku - 1);
+            nil.Tampilposisi(search, posisi);
+            nil.TampilData(search, posisi);
                 break;
         }
         s.close();
