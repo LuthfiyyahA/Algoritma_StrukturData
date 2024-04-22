@@ -1,5 +1,5 @@
 public class Buku15 {
-    int kodeBuku;
+    String kodeBuku;
     String judulBuku;
     int tahunTerbit;
     String pengarang;
@@ -7,7 +7,7 @@ public class Buku15 {
     Buku15 listBk[] = new Buku15[5];
     int idx;
 
-    public Buku15(int kodeBuku, String judulBuku, int tahunTerbit, String pengarang,int stock) {
+    public Buku15(String kodeBuku, String judulBuku, int tahunTerbit, String pengarang,int stock) {
         //kodeBuku = kodeBuku;
         this.kodeBuku = kodeBuku;
         //judulBuku = judulBuku;
