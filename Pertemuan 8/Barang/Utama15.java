@@ -22,10 +22,10 @@ public class Utama15 {
 
             switch (pilih) {
                 case 1:
-                    System.out.print("Masukkan kode barang : ");
+                    System.out.print("Masukkan kode barang   : ");
                     int kode = s.nextInt();
                     s.nextLine();
-                    System.out.print("Masukkan nama barang : ");
+                    System.out.print("Masukkan nama barang   : ");
                     String nama = s.nextLine();
                     System.out.print("Masukkan nama kategori : ");
                     String kategori = s.nextLine();
