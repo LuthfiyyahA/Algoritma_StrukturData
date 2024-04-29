@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class NasabahMain {
     public static void menu() {
-        System.out.println("Masukkan operasi yang diinginkan : ");
-        System.out.println("1. Enqueue");
-        System.out.println("2. Dequeue");
-        System.out.println("3. Print");
-        System.out.println("4. Peek");
-        System.out.println("5. Clear");
-        System.out.println("-----------------");
+        System.out.println("Pilih menu : ");
+        System.out.println("1. Antrian baru");
+        System.out.println("2. Antrian keluar");
+        System.out.println("3. Cek antrian terdepan");
+        System.out.println("4. Cek semua antrian");
+        System.out.println("5. Cek antrian paling belakang");
+        System.out.println("-------------------------------");
     }
 
     public static void main(String[] args) {
