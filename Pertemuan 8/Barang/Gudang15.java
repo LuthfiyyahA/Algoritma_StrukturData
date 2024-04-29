@@ -87,4 +87,26 @@ public class Gudang15 {
 
         return biner;
     }
+
+    public Barang15 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang15 barangTerbawah = tumpukan[0];
+            System.out.println("Barang teratas " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong");
+            return null;
+        }
+    }
+
+    public int cariBarang(String cari) {
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].nama.equalsIgnoreCase(cari)) {
+                System.out.printf("Barang %s terdapat pada posisi ke %d dalam tumpukan\n", tumpukan[i].nama, i + 1);
+                return i;
+            }
+        }
+        System.out.println("Barang tidak ditemukan");
+        return -1;
+    }
 }
