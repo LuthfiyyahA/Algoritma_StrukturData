@@ -6,7 +6,11 @@ public class Utama15 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
-        Gudang15 gudang = new Gudang15(7);
+        System.out.print("Tentukan kapasitas gudang : ");
+        int kapasitas = s.nextInt();
+        s.nextLine();
+
+        Gudang15 gudang = new Gudang15(kapasitas);
 
         while (true) {
             System.out.println("\n------------------------------------------------------");
@@ -14,7 +18,8 @@ public class Utama15 {
             System.out.println("1. Tambah barang");
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
-            System.out.println("4. Keluar");
+            System.out.println("4. Lihat barang teratas");
+            System.out.println("0. Keluar");
             System.out.print("\nPilih : ");
             int pilih = s.nextInt();
             s.nextLine();
@@ -32,13 +37,20 @@ public class Utama15 {
                     Barang15 barangBaru = new Barang15(kode, nama, kategori);
                     gudang.tambahBarang(barangBaru);
                     break;
+
                 case 2:
                     gudang.ambilBarang();
                     break;
+
                 case 3:
                     gudang.tampilkanBarang();
                     break;
+
                 case 4:
+                    gudang.lihatBarangTeratas();
+                    break;
+                    
+                case 0:
                     break;
             
                 default:
