@@ -22,6 +22,7 @@ public class QueueMain {
         do {
             menu();
             pilih = sc.nextInt();
+            sc.nextLine();
 
             switch (pilih) {
                 case 1:
