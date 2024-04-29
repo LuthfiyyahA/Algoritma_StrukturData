@@ -19,6 +19,8 @@ public class Utama15 {
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Lihat barang teratas");
+            System.out.println("5. Lihat barang terbawah");
+            System.out.println("6. Cari barang");
             System.out.println("0. Keluar");
             System.out.print("\nPilih : ");
             int pilih = s.nextInt();
@@ -48,6 +50,16 @@ public class Utama15 {
 
                 case 4:
                     gudang.lihatBarangTeratas();
+                    break;
+                    
+                case 5:
+                    gudang.lihatBarangTerbawah();
+                    break;
+
+                case 6:
+                    System.out.println("Masukkan nama barang : ");
+                    String cari = s.nextLine();
+                    gudang.cariBarang(cari);
                     break;
                     
                 case 0:
