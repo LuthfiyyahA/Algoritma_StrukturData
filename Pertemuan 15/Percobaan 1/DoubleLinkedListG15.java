@@ -75,4 +75,20 @@ public class DoubleLinkedListG15 {
         head = null;
         size = 0;
     }
+
+    public void updateJarak(int tujuan, int jarakBaru) throws Exception {
+        NodeG15 current = head;
+        boolean found = false;
+        while (current != null) {
+            if (current.data == tujuan) {
+                current.jarak = jarakBaru;
+                found = true;
+                break;
+            }
+            current = current.next;
+        }
+        if (!found) {
+            throw new Exception("Tujuan tidak ditemukan dalam daftar");
+        }
+    }
 }

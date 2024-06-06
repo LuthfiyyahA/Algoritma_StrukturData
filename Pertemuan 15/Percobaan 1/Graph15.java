@@ -76,4 +76,31 @@ public class Graph15 {
         }
         return false;
     }
+
+    public void cekEdge(int asal, int tujuan) throws Exception {
+        if (isAdjacent(asal, tujuan)) {
+            System.out.print("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " bertetangga\n");
+            System.out.println("");
+        } else {
+            System.out.print("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " tidak bertetangga\n");
+            System.out.println("");
+        }
+    }
+
+    public void updateJarak(int asal, int tujuan, int jarakBaru) throws Exception {
+        if (isAdjacent(asal, tujuan)) {
+            list[asal].updateJarak(tujuan, jarakBaru);
+            System.out.println("Jarak dari Gedung " + (char) ('A' + asal) + " ke Gedung " + (char) ('A' + tujuan) + " telah diperbarui menjadi " + jarakBaru + " m");
+        } else {
+            System.out.println("Tidak ada jalan langsung dari Gedung " + (char) ('A' + asal) + " ke Gedung " + (char) ('A' + tujuan));
+        }
+    }
+
+    public int hitungEdge() {
+        int jumlahEdge = 0;
+        for (int i = 0; i < vertex; i++) {
+            jumlahEdge += list[i].size();
+        }
+        return jumlahEdge;
+    }
 }
