@@ -14,12 +14,12 @@ public class Graph15 {
         //directed
         list[asal].addFirst(tujuan, jarak);
         //undirected
-        list[tujuan].addFirst(asal, jarak);
+        //list[tujuan].addFirst(asal, jarak);
     }
 
     public void degree(int asal) throws Exception {
         //undirected
-        System.out.println("Degree dari gedung " + (char) ('A' + asal) + " : " +list[asal].size());
+        //System.out.println("Degree dari gedung " + (char) ('A' + asal) + " : " +list[asal].size());
         //directed
         int k, totalIn = 0, totalOut = 0;
         for (int i = 0; i < vertex; i++) {
@@ -66,5 +66,14 @@ public class Graph15 {
             }
         }
         System.out.println("");
+    }
+
+    public boolean isAdjacent(int asal, int tujuan) throws Exception {
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                return true;
+            }
+        }
+        return false;
     }
 }
