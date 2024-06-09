@@ -62,6 +62,7 @@ public class GraphMatriks15 {
                 }
             }
         }
+        System.out.println("Total edge dalam graf: " + jumlahEdge);
         return jumlahEdge;
     }
 }
