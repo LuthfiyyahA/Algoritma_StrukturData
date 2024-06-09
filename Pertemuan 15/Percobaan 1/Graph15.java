@@ -101,6 +101,7 @@ public class Graph15 {
         for (int i = 0; i < vertex; i++) {
             jumlahEdge += list[i].size();
         }
+        System.out.println("Total edge dalam graf: " + jumlahEdge);
         return jumlahEdge;
     }
 }
