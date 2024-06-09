@@ -33,7 +33,8 @@ public class GraphMain15 {
                     int tujuan = sc.nextInt();
                     System.out.print("Masukkan jarak gedung : ");
                     int jarak = sc.nextInt();
-                    gedung.addEdge(asal, tujuan, jarak);;
+                    gedung.addEdge(asal, tujuan, jarak);
+                    System.out.println("-------------------------------");
                     break;
                 
                 case 2:
@@ -42,38 +43,44 @@ public class GraphMain15 {
                     System.out.print("Masukkan gedung tujuan yang akan dihapus : ");
                     tujuan = sc.nextInt();
                     gedung.removeEdge(asal, tujuan);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 3:
-                    System.out.print("Masukkan vertex untuk mengecek degree :");
+                    System.out.print("Masukkan vertex untuk mengecek degree : ");
                     asal = sc.nextInt();
                     gedung.degree(asal);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 4:
                     gedung.printGraph();
+                    System.out.print("-------------------------------");
                     break;
 
                 case 5:
-                    System.out.print("Masukkan asal gedung :");
+                    System.out.print("Masukkan asal gedung : ");
                     asal = sc.nextInt();
                     System.out.print("Masukkan gedung tujuan : ");
                     tujuan = sc.nextInt();
                     gedung.cekEdge(asal, tujuan);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 6:
-                    System.out.print("Masukkan asal gedung :");
+                    System.out.print("Masukkan asal gedung : ");
                     asal = sc.nextInt();
                     System.out.print("Masukkan gedung tujuan : ");
                     tujuan = sc.nextInt();
-                    System.out.print("Masukkan jarak baru gedung :");
+                    System.out.print("Masukkan jarak baru gedung : ");
                     int jarakBaru = sc.nextInt();
                     gedung.updateJarak(asal, tujuan, jarakBaru);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 7:
                     gedung.hitungEdge();
+                    System.out.println("-------------------------------");
                     break;
 
                 case 8:
