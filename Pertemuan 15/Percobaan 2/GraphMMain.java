@@ -33,6 +33,7 @@ public class GraphMMain {
                     System.out.print("Masukkan jarak gedung : ");
                     int jarak = sc.nextInt();
                     gdg.makeEdge(asal, tujuan, jarak);
+                    System.out.println("-------------------------------");
                     break;
                 
                 case 2:
@@ -41,28 +42,33 @@ public class GraphMMain {
                     System.out.print("Masukkan gedung tujuan yang akan dihapus : ");
                     tujuan = sc.nextInt();
                     gdg.removeEdge(asal, tujuan);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 3:
-                    System.out.print("Masukkan vertex untuk mengecek degree :");
+                    System.out.print("Masukkan vertex untuk mengecek degree : ");
                     asal = sc.nextInt();
                     gdg.degree(asal);
+                    System.out.println("-------------------------------");
                     break;
 
                 case 4:
                     gdg.printGraph();
+                    System.out.print("-------------------------------");
                     break;
 
                 case 5:
-                    System.out.print("Masukkan asal gedung :");
+                    System.out.print("Masukkan asal gedung : ");
                     asal = sc.nextInt();
                     System.out.print("Masukkan gedung tujuan : ");
                     tujuan = sc.nextInt();
                     gdg.cekEdge(asal, tujuan);
+                    System.out.println("-------------------------------");
                     break;
                 
                 case 6:
                     gdg.hitungEdge();
+                    System.out.println("-------------------------------");
                     break;
 
                 case 7:
